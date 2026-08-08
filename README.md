@@ -1,5 +1,6 @@
-===================
-                    PARAMETRIC BIOMIMETIC METAMATERIAL ENGINE
+===
+
+PARAMETRIC BIOMIMETIC METAMATERIAL ENGINE
     
     License: Open Source Hardware Association (OSHWA) Compliant / Copyleft
     Fidelity: Scale-Invariant Multi-Physics Closed-Loop Digital Twin
