@@ -1,0 +1,38 @@
+{
+  "profile_metadata": {
+    "identifier": "AMBIENT_VORTEX_GENERATOR_PRINT_PROFILE_V1",
+    "target_material_family": "100_PERCENT_RECYCLABLE_TPU_MONOMATERIAL",
+    "rigid_chassis_stock": "BASF_FORWARD_AM_ULTRAFUSE_TPU_64D",
+    "conductive_node_stock": "LUBRIZOL_ESTANE_CONDUCTIVE_CARBON_TPU",
+    "slicing_engine_compatibility": ["PrusaSlicer", "Cura", "OrcaSlicer"]
+  },
+  "extrusion_temperature_matrix": {
+    "nozzle_temperature_celsius": 245.0,
+    "bed_temperature_celsius": 50.0,
+    "chamber_heating_active": false,
+    "cooling_fan_speed_percentage": 40.0
+  },
+  "layer_geometry_constraints": {
+    "primary_layer_height_mm": 0.20,
+    "first_layer_height_mm": 0.24,
+    "perimeter_wall_loops_minimum": 4,
+    "top_solid_surface_layers": 5,
+    "bottom_solid_surface_layers": 5
+  },
+  "structural_infill_configuration": {
+    "infill_density_percentage": 20.0,
+    "infill_pattern_type": "Gyroid",
+    "gyroid_multi_axis_dampening_active": true
+  },
+  "overhang_vector_optimization": {
+    "support_material_generation_enabled": false,
+    "unsupported_bridge_threshold_degrees": 45.0,
+    "parametric_pitch_override_degrees": 42.50
+  },
+  "volumetric_speed_limits": {
+    "perimeter_print_speed_mms": 35.0,
+    "infill_print_speed_mms": 40.0,
+    "travel_speed_mms": 120.0,
+    "max_volumetric_speed_mm3_s": 4.5
+  }
+}
