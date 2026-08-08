@@ -18,7 +18,17 @@ remains completely unified.
 
 --------------------------------------------------------------------------------
 
-2. FOUNDATIONAL MATHEMATICAL CONSTANTS
+2. TARGET MATERIAL SYSTEM (100% RECYCLABLE MONOMATERIAL)
+To achieve complete, circular recyclability upstream, this framework mandates 
+the use of a single polymer family engineered to alternating densities. This 
+allows rigid parts and flexible parts to be melted down together infinitely:
+
+- PASSIVE STRUCTURE: BASF Forward AM Ultrafuse TPU 64D (Density: 1.21 g/cm³).
+- ACTIVE TRANSMISSION: Lubrizol Estane Conductive Carbon TPU (Density: 1.18 g/cm³).
+
+--------------------------------------------------------------------------------
+
+3. FOUNDATIONAL MATHEMATICAL CONSTANTS
 The spatial layout, vertical depth profiles, and material distributions are 
 governed entirely by un-lockable natural ratios:
 
@@ -36,7 +46,7 @@ governed entirely by un-lockable natural ratios:
 
 --------------------------------------------------------------------------------
 
-3. SYSTEM SCALE APPLICATIONS
+4. SYSTEM SCALE APPLICATIONS
 The compiled coordinate arrays outputted by this engine feed directly into three 
 systemic manufacturing infrastructure pilots:
 
@@ -52,7 +62,7 @@ systemic manufacturing infrastructure pilots:
 
 --------------------------------------------------------------------------------
 
-4. REPOSITORY ARCHITECTURE
+5. REPOSITORY ARCHITECTURE
 - README.md: This strict 80-character margin orientation protocol.
 - universal_meta_tile.scad: The 3D open-hardware compiler script.
 - spatial_ingress_twin.py: The real-time multi-physics cyber-physical twin.
