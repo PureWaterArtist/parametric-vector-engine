@@ -1,5 +1,5 @@
 // =============================================================================
-// UNIVERSAL GEOMETRIC HARVESTING ENGINE v3.0 (42.5-DEGREE COGNITIVE PHASE)
+// UNIVERSAL GEOMETRIC HARVESTING ENGINE v3.1 (MONOMATERIAL UPDATE)
 // Generated via Python Physics Synthesis Engine
 // License: Open Source Hardware Association (OSHWA) Compliant / Copyleft
 // Architecture: Scale-Invariant Deterministic Fractal Metamaterial
@@ -55,7 +55,7 @@ function is_prime_node(n) =
 
 module Render_Universal_Meta_Tile() {
     difference() {
-        // LAYER 1: Core Chassis Floor 
+        // LAYER 1: Core Chassis Floor (BASF Forward AM Ultrafuse TPU 64D)
         color([0.15, 0.15, 0.15, 0.95])
         cylinder(h = BASE_HEIGHT, r = HEX_RADIUS, $fn = 6); 
     }
@@ -76,12 +76,12 @@ module Render_Universal_Meta_Tile() {
                 let (z_wave = sin(i * 180 / PHI) * Z_SCALE * cos(REFRACTION_VECTOR)) {
                     
                     if (is_prime_node(i)) {
-                        // ACTIVE PIEZOELECTRIC VECTOR NODE: Tuned using refraction offset
+                        // ACTIVE PIEZOELECTRIC VECTOR NODE: Lubrizol Estane TPU
                         translate([x, y, BASE_HEIGHT])
                         color([0.85, 0.1, 0.1]) // High-visibility red
                         cylinder(h = BASE_HEIGHT + z_wave, r1 = 1.6, r2 = 0.6, $fn = 12);
                     } else {
-                        // PASSIVE STRUCTURAL METAMATERIAL ENVELOPE (Auxetic flexible polymer)
+                        // PASSIVE STRUCTURAL ENVELOPE: BASF Ultrafuse TPU
                         translate([x, y, BASE_HEIGHT])
                         color([0.1, 0.45, 0.85]) // Structural blue
                         cylinder(h = BASE_HEIGHT + z_wave, r = 1.1, $fn = 6);
