@@ -1,4 +1,4 @@
-===
+---
 
 PARAMETRIC BIOMIMETIC METAMATERIAL ENGINE
     
@@ -6,9 +6,11 @@ PARAMETRIC BIOMIMETIC METAMATERIAL ENGINE
     Fidelity: Scale-Invariant Multi-Physics Closed-Loop Digital Twin
     Automation Status: Automated CI Verification Pipeline Active [PASSING]
 
-===
+---
+
 DESIGN PRINCIPLES: THE JUNGLE VS. THE NATURAL LAW
-===
+
+---
 
 When we design tools, houses, or energy systems, we have to choose which set of 
 rules we want to follow. Most of our modern world is built on a misunderstanding 
@@ -78,7 +80,7 @@ optical paths natively inside a single monomaterial canvas. The physical form
 updates automatically based on scale, while the underlying mathematical DNA 
 remains completely unified.
 
------------------------------------------------
+---
 
 2. TARGET MATERIAL SYSTEM (100% RECYCLABLE MONOMATERIAL)
 To achieve complete, circular recyclability upstream, this framework mandates 
@@ -88,7 +90,7 @@ allows rigid parts and flexible parts to be melted down together infinitely:
 - PASSIVE CHASSIS: BASF Forward AM Ultrafuse TPU 64D (Density: 1.21 g/cm³).
 - ACTIVE NODE: Lubrizol Estane Conductive Carbon TPU (Density: 1.18 g/cm³).
 
------------------------------------------------
+---
 
 3. CORE MATHEMATICAL CONSTANTS
 The spatial layout, vertical depth profiles, and material distributions are 
@@ -96,17 +98,21 @@ governed entirely by un-lockable natural ratios:
 
 - THE GOLDEN RATIO (φ): Establishes logarithmic fractal scaling to guarantee 
   seamless, infinite component modularity from the micron to the chassis.
+
 - THE GOLDEN ANGLE (137.507°): Controls the 2D polar vector expansion to 
   achieve nature's absolute tightest non-overlapping node packaging.
+
 - TRANSCENDENTAL PI (π): Modulates 3D surface micro-ridges to eliminate fluid 
   friction and optimize solid-state photon deflection.
+
 - PRIME NUMBERS: Establishes a harmonically isolated spatial lattice. Active 
   energy-harvesting elements are positioned strictly along prime increments 
   to damp kinetic shock waves without triggering destructive resonance.
+
 - 42.5 DEGREES: Acts as the primary refraction and vortex pitch baseline, 
   enforcing total internal light reflection and zero-drag fluid acceleration.
 
------------------------------------------------
+---
 
 4. SYSTEM REPOSITORY BLUEPRINTS
 This sandbox contains five interconnected execution and verification layers:
