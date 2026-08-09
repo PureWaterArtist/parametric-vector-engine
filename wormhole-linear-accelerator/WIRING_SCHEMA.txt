@@ -1,0 +1,54 @@
+================================================================================
+          HARDWARE WIRING SCHEMA: INTERFACE BRIDGE MATRIX
+================================================================================
+
+This document maps out the precise, point-to-point connections from your 24 
+gold-plated pogo-pin terminals to the Digilent Arty A7 PMOD headers. 
+
+--------------------------------------------------------------------------------
+1. COMPONENT STAGING PRE-REQUISITES
+--------------------------------------------------------------------------------
+- WIRE STOCK: 30 AWG Kynar Insulated Wire-Wrap Copper Wire (Solid Core).
+- FLUX MATRIX: High-purity, no-clean rosin core solder wire (63/37 Sn/Pb alloy).
+- TOOL ENVELOPE: Temperature-controlled fine-tip soldering station set to 320°C.
+- HARDWARE PINS: 24x Gold-Plated Pogo-Pin Spring Terminals (0.5mm tip diameter).
+
+--------------------------------------------------------------------------------
+2. LOGIC CONNECTION HOOKUP MAP (PMOD JA HEADER TERMINAL INPUTNODE)
+--------------------------------------------------------------------------------
+The first terminal array handles incoming quantum state signals. Solder solid-
+core Kynar lines from the base plate pogo pins straight to the JA header pins:
+
+- PIN 1: Solder Pogo Pin #1 (Prime Node i=2)   =======> PMOD JA Pin 1 (G13)
+- PIN 2: Solder Pogo Pin #2 (Prime Node i=3)   =======> PMOD JA Pin 2 (B11)
+- PIN 3: Solder Pogo Pin #3 (Prime Node i=5)   =======> PMOD JA Pin 3 (A11)
+- PIN 4: Solder Pogo Pin #4 (Prime Node i=7)   =======> PMOD JA Pin 4 (D12)
+- PIN 5: Solder Common Ground Circuit Ring     =======> PMOD JA Pin 5 (GND)
+- PIN 6: Solder 3.3V Power Delivery Loop       =======> PMOD JA Pin 6 (VCC)
+
+--------------------------------------------------------------------------------
+3. TELEMETRY OUTPUT DATA CORRELATION MAP (PMOD JB ANALYSIS CORRIDOR)
+--------------------------------------------------------------------------------
+The second terminal array handles outbound telemetry tracking. Solder lines from 
+the output collection pins to the JB header to feed your logic analyzer:
+
+- PIN 1: Solder Pogo Pin #5 (Exit Node i=11)   =======> PMOD JB Pin 1 (D14)
+- PIN 2: Solder Pogo Pin #6 (Exit Node i=13)   =======> PMOD JB Pin 2 (F16)
+- PIN 3: Solder Pogo Pin #7 (Exit Node i=17)   =======> PMOD JB Pin 3 (G16)
+- PIN 4: Solder Pogo Pin #8 (Exit Node i=19)   =======> PMOD JB Pin 4 (H14)
+- PIN 5: Solder Common Ground Circuit Ring     =======> PMOD JB Pin 5 (GND)
+- PIN 6: Solder 3.3V Power Delivery Loop       =======> PMOD JB Pin 6 (VCC)
+
+--------------------------------------------------------------------------------
+4. SOLDERING METHODOLOGY & SAFETY RULES
+--------------------------------------------------------------------------------
+1. TIN THE TIPS: Before inserting the pogo pins into the 3D-printed chassis, 
+   pre-tin the hollow solder cups at the tail of each pin with a microscopic 
+   bead of rosin-core solder.
+2. HEAT RETENTION WARNING: TPU material melts at 220°C. To protect your printed 
+   base plate shell, execute your solder joints in under **2.0 seconds** per pin 
+   to prevent thermal heat migration from melting the surrounding plastic walls.
+3. ISOLATE PERIMETERS: Slip a 1.0mm diameter piece of heat-shrink tubing over 
+   each connection line to prevent any raw copper lines from creating a short 
+   circuit against neighboring conductive tracks.
+================================================================================
