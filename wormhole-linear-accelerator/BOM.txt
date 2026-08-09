@@ -1,0 +1,71 @@
+================================================================================
+     BILL OF MATERIALS (BOM): HOLOGRAPHIC QUANTUM ACCELERATOR EMULATOR
+================================================================================
+
+This document indexes the updated hardware components, local processors, and 
+precision telemetry modules required to build a physical benchtop engineering 
+workbench for your high-fidelity quantum wormhole simulation node. 
+
+--------------------------------------------------------------------------------
+1. COMPUTE ARCHITECTURE LAYER (THE MATRIX COMPUTATION NODE)
+--------------------------------------------------------------------------------
+- CORE QUANTUM ENGINE EMULATOR:
+  * Qty: 1 Unit
+  * Spec: NVIDIA Jetson Orin Nano Developer Kit (8GB Module)
+  * Purpose: Serves as your edge computing node to execute the complex matrix 
+             logic inside `quantum_simulation_twin.py` in real time.
+
+- REPROGRAMMABLE GATE HARDWARE ARRAY:
+  * Qty: 1 Board
+  * Spec: Xilinx Artix-7 FPGA Development Board (Digilent Arty A7)
+  * Purpose: Hardwires the Hadamard and CNOT quantum gate transformations directly 
+             into physical silicon hardware pathways to maximize state speed.
+
+--------------------------------------------------------------------------------
+2. MONOMATERIAL SIGNAL HARNEST & CARRIER CHASSIS
+--------------------------------------------------------------------------------
+- SYSTEM CONTROL SHELL PLATFORM:
+  * Qty: 1 kg Spool
+  * Spec: BASF Forward AM Ultrafuse TPU 64D (Rigid Monomaterial Base)
+  * Purpose: 3D prints the structural workbench housing, partitioning the 
+             electronic nodes along your precise scale-invariant geometries.
+
+- INDUCTION TRACK TRACES:
+  * Qty: 1 kg Spool
+  * Spec: Lubrizol Estane Conductive Carbon Black TPU
+  * Purpose: Co-extrudes the physical, conductive circuit paths connecting the 
+             FPGA gates to the external telemetry pins.
+
+--------------------------------------------------------------------------------
+3. HIGH-FIDELITY PRECISION TELEMETRY & SIGNAL SIGNAL RECOGNITION
+--------------------------------------------------------------------------------
+- ARBITRARY PULSE GENERATOR DRIVE:
+  * Qty: 1 Unit
+  * Spec: Rigol DG822 Pro Dual-Channel Function/Arbitrary Waveform Generator
+  * Purpose: Injects precisely tuned microvolt-level pulses into the conductive 
+             TPU traces to simulate quantum state entry amplitudes.
+
+- LOGIC FIELD ANALYZER INTERFACE:
+  * Qty: 1 Unit
+  * Spec: Saleae Logic 8 USB Logic Analyzer & Digital Signal Probe
+  * Purpose: Taps directly into the prime-number node locations to track and 
+             verify signal propagation patterns without creating data drift.
+
+- INTERCONNECT LINK NODES:
+  * Qty: 24 pins
+  * Spec: Gold-Plated Pogo-Pin Spring Contact Terminals (Through-Hole)
+  * Purpose: Establishes a zero-friction mechanical bridge between the 
+             conductive TPU traces and the hardware analyzer array.
+
+--------------------------------------------------------------------------------
+TOTAL HARDWARE INTEGRATION PROTOCOL
+--------------------------------------------------------------------------------
+The entire compute node and testing array is sized for clean, low-voltage desktop 
+operation. It replaces expensive, dangerous high-vacuum laboratory equipment 
+with pure, highly precise digital and silicon gate emulation. You can source 
+the electronics easily online or test the signal logic loops live with fellow 
+system builders during an open-lab workbench night at a local hacker sandbox 
+like i3 Detroit or Maker Works.
+
+Save this file locally as `QUANTUM_ACCELERATOR_BOM.txt` inside your project vault.
+================================================================================
