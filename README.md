@@ -1,5 +1,3 @@
----
-
 PARAMETRIC BIOMIMETIC METAMATERIAL ENGINE
     
     License: Open Source Hardware Association (OSHWA) Compliant / Copyleft
