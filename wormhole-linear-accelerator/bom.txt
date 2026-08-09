@@ -1,0 +1,71 @@
+================================================================================
+     BILL OF MATERIALS (BOM): PARAMETRIC WORMHOLE LINEAR ACCELERATOR
+================================================================================
+
+This document indexes the exact laboratory rigging components, materials, and 
+advanced components required to manufacture a benchtop testing prototype of 
+the Wormhole Linear Accelerator. To ensure full alignment with your open-source 
+registry, the structural core relies completely on your 100% recyclable, 
+co-extruded TPU monomaterial chassis.
+
+--------------------------------------------------------------------------------
+1. STRUCTURAL CONTROLLER SHELL (MONOMATERIAL ADVANCED PRINT PROFILE)
+--------------------------------------------------------------------------------
+- STRUCTURAL CHASSIS HOUSING:
+  * Qty: 4 kg Spool
+  * Spec: BASF Forward AM Ultrafuse TPU 64D (Rigid Monomaterial Base)
+  * Density: 1.21 g/cm³
+  * Purpose: 3D prints the outer cascading vacuum pipe shell and the 42.5-degree 
+             induction slot walls via your `slicing_profile_tpu.json` profile.
+
+- COGNITIVE CONDUCTION HARNEST:
+  * Qty: 2 kg Spool
+  * Spec: Lubrizol Estane Conductive Carbon Black TPU (Flexible Signal Paths)
+  * Density: 1.18 g/cm³ 
+  * Purpose: Co-extrudes the internal helical field tracking lines and prime-
+             number resonance dampening pads to isolate harmonic vibrations.
+
+--------------------------------------------------------------------------------
+2. HELICAL FIELD PROPULSION & VACUUM INDUCTION SYSTEMS
+--------------------------------------------------------------------------------
+- MULTI-AXIS ELECTROMAGNETIC GUIDE LINES:
+  * Qty: 500 Feet
+  * Spec: 28 AWG High-Purity Oxygen-Free Copper Magnet Wire (Enamel Insulated)
+  * Purpose: Hand-wound along the 3D-printed 42.5-degree internal helix paths 
+             to generate the inward-spinning centripetal magnetic field matrix.
+
+- INDUCTION NODE CONNECTOR CARRIERS:
+  * Qty: 24 Nodes
+  * Spec: Gold-Plated Pogo-Pin Spring Terminals (Through-Hole Mounting)
+  * Purpose: Provides clean, low-resistance mechanical contact points directly 
+             into the internal conductive TPU traces along prime increments.
+
+- PRIMARY VACUUM FOREPUMP CONDUIT:
+  * Qty: 1
+  * Spec: Dual-Stage Rotary Vane Deep Vacuum Pump (Capable of 0.3 Micron / 3 Pa)
+  * Sourcing: Local Industrial Supply/Laboratory Liquidator
+  * Purpose: Draws down the baseline atmospheric pressure inside the central 
+             siphon core before the centripetal energy loop is initialized.
+
+--------------------------------------------------------------------------------
+3. SOLID-STATE SIGNAL GENERATION & DATA ROOM STAGING
+--------------------------------------------------------------------------------
+- MATRIX COILS GENERATOR INTERFACE:
+  * Qty: 1
+  * Spec: Dual-Channel Arbitrary Function Waveform Generator (20 MHz / 14-bit)
+  * Purpose: Injects perfectly timed electrical pulses into the copper guide 
+             lines to simulate the counter-rotating wave mechanics.
+
+- PRIMARY DRIVE AMPLIFIER MATRIX:
+  * Qty: 2
+  * Spec: High-Voltage, High-Frequency Linear Power Amplifier Boards (100W Peak)
+  * Purpose: Multiplies the signal generator output to force high-velocity 
+             electron transit paths along the internal Phi-slope channels.
+
+- ANALOG TELEMETRY FEEDBACK ARRAY:
+  * Qty: 1 Kit
+  * Spec: High-Sensitivity Hall Effect Magnetic Field Sensor Modules (Linear)
+  * Purpose: Maps the spatial field strength live inside the 3D-printed base 
+             plate to feed real-time coordinates back to your twin matrix.
+
+================================================================================
