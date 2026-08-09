@@ -1,0 +1,57 @@
+================================================================================
+          ASSEMBLY PROTOCOL: PHYSICAL CHASSIS INTEGRATION MATRIX
+================================================================================
+
+This document outlines the final mechanical steps required to lock your hardware 
+boards, pogo-pin arrays, and co-extruded TPU components into a single, unified 
+benchtop simulation node.
+
+--------------------------------------------------------------------------------
+1. MECHANICAL PARTS MATRIX & CHASSIS SEATING
+--------------------------------------------------------------------------------
+1. CLEAN THE CORE: Pull your printed base plate chassis off the printer bed. 
+   Inspect the interior 42.5-degree channels to verify they are completely 
+   clear of stringing or stray plastic loops.
+2. PRESS-FIT THE PINS: Take your pre-soldered gold pogo pins and press them 
+   directly into the structural base sockets. The sockets are designed with an 
+   interference fit; press until the tips protrude exactly 2.0mm through to 
+   contact your internal conductive TPU loops.
+3. SECURE THE MOUNT: Mount the Xilinx Artix-7 FPGA board onto the integrated 
+   chassis riser tray. Lock it down using four M3 x 6mm nylon screws to isolate 
+   the silicon circuit board from generating localized static interference.
+
+--------------------------------------------------------------------------------
+2. INITIAL TEST RUNWAY: FIRST POWER-ON DIAGNOSTIC CHECKS
+--------------------------------------------------------------------------------
+Before connecting your main USB logic analyzer, execute these sequential safety 
+checks to protect your hardware chips from unexpected voltage shorts:
+
+- CHECK 1: THE CONTINUITY AUDIT (UNPOWERED)
+  * Tool: Digital Multimeter set to Continuity mode (Beep test).
+  * Action: Probe between individual pogo-pin terminals and your common ground 
+            ring. The multimeter must stay completely silent. 
+  * Target: If it beeps, a copper wire line is shorted. De-solder immediately.
+
+- CHECK 2: STATIC SIGNAL RESISTANCE VALUE CORES
+  * Tool: Digital Multimeter set to Resistance (Ohms).
+  * Action: Measure between your active prime pogo pins and the ground circuit.
+  * Target: You should read a steady, finite resistance value matching the 
+            density profile of your Lubrizol conductive carbon TPU loops. 
+
+- CHECK 3: INITIAL LOW-VOLTAGE COMMENCE IGNITION (POWERED)
+  * Action: Connect your dedicated USB programming cable from your computer to 
+            the Artix-7 board power port. Flip the master switch to ON.
+  * Target: Confirm that the green power LED stays lit and steady, and that 
+            no internal components generate excessive thermal heat spikes.
+
+--------------------------------------------------------------------------------
+3. DATA ROOM SYNCHRONIZATION EXECUTION
+--------------------------------------------------------------------------------
+Once the hardware passes all three diagnostic checks, launch your terminal:
+1. Load your compiled constraints file `quantum_hardware_pins.xdc` into your 
+   Vivado environment to program the hardware gates.
+2. Boot up your automated unit test suite `test_quantum_core.py` to confirm your 
+   virtual Linux pipeline passes with green checkmarks.
+3. Open your Saleae Logic Analyzer software to read the outbound telemetry 
+   pulses coming from your PMOD JB header.
+================================================================================
