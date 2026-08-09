@@ -1,11 +1,11 @@
 # =============================================================================
-# COGNITIVE AUTOMATION PIPELINE: CONTINUOUS FIRST-PRINCIPLES VALIDATION v1.0
+# COGNITIVE AUTOMATION PIPELINE: CONTINUOUS QUANTUM MATRIX VERIFICATION v1.1
 # License: Open Source Hardware Association (OSHWA) Compliant / Copyleft
-# Description: Automates the technical multi-physics compilation verification
-#              to guarantee mathematical execution integrity on every commit.
+# Description: Automates the programmatic compilation and unit test execution
+#              to guarantee mathematical matrix integrity on every commit.
 # Format: Strict 80-Character Margin Constraints for Mobile Scannability
 # =============================================================================
-name: First-Principles Validation Matrix
+name: Quantum Teleportation Validation Matrix
 
 on:
   push:
@@ -14,7 +14,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  execute-physics-verification:
+  execute-matrix-verification:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +26,8 @@ jobs:
       with:
         python-version: "3.11"
 
-    - name: Audit Matrix Syntax and Compile Multi-Physics Digital Twin
+    - name: Execute Holographic State Twin and Run Probability Unit Tests
       run: |
-        python spatial_ingress_twin.py
+        python quantum_simulation_twin.py
+        python -m unittest test_quantum_core.py
         
