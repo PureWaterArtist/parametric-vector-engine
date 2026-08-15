@@ -48,23 +48,16 @@ to a massive spinning galaxy.
 
 ---
 
-3. HOW WE USE THIS TO BUILD A BETTER FUTURE
-We do not have to live inside a fragile, high-friction jungle economy. By 
-aligning our backyard projects and local technologies with the Law of Nature, 
-we can create true, lasting independence for our families:
+3. HOW WE USE THIS TO BUILD A BETTER FUTURE:
+ We do not have to live inside a fragile, high-friction jungle economy. By aligning our backyard projects and local technologies with the Law of Nature, we can create true, lasting independence for our families.
 
-- RECYCLABLE MATERIALS: Instead of mixing toxic plastics that turn into forever 
-  garbage, we use single, pure material families (like specialized TPU) that 
-  can be melted down and reprinted an infinite number of times without waste.
-- PASSIVE POWER HARVESTING: Instead of using massive, loud, expensive engines 
-  to force air or water through a pipe, we shape our designs to copy natural vortex 
-  shapes. By gently guiding the fluid inward along its own preferred, low-
-  resistance path, the air accelerates itself using its own natural momentum.
+- RECYCLABLE MATERIALS:
+  Instead of mixing toxic plastics that turn into forever garbage, we use single, pure material families (like specialized TPU) that can be melted down and reprinted an infinite number of times without waste.
+  
+- PASSIVE POWER HARVESTING:
+  Instead of using massive, loud, expensive engines to force air or water through a pipe, we shape our designs to copy natural vortex shapes. By gently guiding the fluid inward along its own preferred, low-resistance path, the air accelerates itself using its own natural momentum.
 
-CONCLUSION: Engineering is not about using brute force to dominate our 
-surroundings. It is about clearing away the corporate noise, listening to the 
-natural laws of the world, and building clean, quiet solutions that give our 
-communities total freedom.
+CONCLUSION: Engineering is not about using brute force to dominate our surroundings. It is about clearing away the corporate noise, listening to the natural laws of the world, and building clean, quiet solutions that give our communities total freedom.
 
 ===
 
