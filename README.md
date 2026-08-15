@@ -80,6 +80,14 @@ optical paths natively inside a single monomaterial canvas. The physical form
 updates automatically based on scale, while the underlying mathematical DNA 
 remains completely unified.
 
+## 🚀 QUICK START DEMO
+
+To immediately verify the performance arbitrage of the centripetal vortex engine using the Darcy-Weisbach friction loss model, run the automated verification script:
+
+```bash
+python fluid_vortex_systems/vortex_hydraulic_verifier.py
+```
+
 ---
 
 2. TARGET MATERIAL SYSTEM (100% RECYCLABLE MONOMATERIAL)
