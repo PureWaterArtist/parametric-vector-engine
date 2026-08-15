@@ -68,7 +68,8 @@ communities total freedom.
 
 ===
 
-1. PROJECT MISSION OVERVIEW
+PROJECT MISSION OVERVIEW
+
 This repository houses the foundational open-source architecture for a scale-
 invariant multi-physics design engine. By treating physical matter as code, 
 this framework completely bypasses the linear, multi-material manufacturing 
