@@ -79,4 +79,5 @@ corporate monopolies and solves major environmental friction points:
   acts as a fuel-free refrigerator. It siphons hot, stagnant city air, processes 
   it through the core expansion, drops the thermal profile by several degrees, 
   and vents cool drafts back into the street to fight urban heat islands.
-================================================================================
+
+===============================================
