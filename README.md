@@ -20,6 +20,7 @@ the difference between the "Law of the Jungle" and the "Law of Nature."
 ---
 
 1. THE LAW OF THE JUNGLE: THE WAY OF WAITING AND FRICTION
+
 Most people look at the wilderness and see a brutal race where only the 
 strongest survive. This is what we call the Law of the Jungle. 
 
@@ -36,6 +37,7 @@ endless loop of buying things that are designed to break.
 ---
 
 2. THE LAW OF NATURE: THE WAY OF HARMONY AND BALANCE
+
 The true Law of Nature is completely different. It is the invisible blueprint 
 of geometry and natural balance that governs everything from a simple seashell 
 to a massive spinning galaxy.
