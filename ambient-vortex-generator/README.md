@@ -1,8 +1,9 @@
-================================================================================
+===
           PARAMETRIC AMBIENT VORTEX GENERATOR: SOLID-STATE ENGINE v1.0
     License: Open Source Hardware Association (OSHWA) Compliant / Copyleft
     Print Profile: 100% Recyclable Monomaterial TPU Production Standard
-================================================================================
+
+===
 
 1. WHAT IS IT?
 The Parametric Ambient Vortex Generator is an un-lockable, solid-state air-
