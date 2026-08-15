@@ -114,6 +114,22 @@ governed entirely by un-lockable natural ratios:
 
 ---
 
+## 🗺️ SYSTEM ARCHITECTURE MAP
+
+This engine is divided into three modular execution layers. Use the directory below to navigate the codebase:
+
+### 1. 📁 Physics Engines & Cognitive Verification
+*   [`physics_engines/spatial_ingress_twin.py`](./physics_engines/spatial_ingress_twin.py) - Real-time multi-physics cyber-physical twin data intake engine. Calculates mass, gravity, and Coriolis vector distribution.
+*   [`physics_engines/cognitive_thinking_matrix.py`](./physics_engines/cognitive_thinking_matrix.py) - First-principles decoupled neural node logic to verify concept structural validity.
+
+### 2. 📁 Fluid Dynamics & Vortex Simulation
+*   [`fluid_vortex_systems/vortex_hydraulic_verifier.py`](./fluid_vortex_systems/vortex_hydraulic_verifier.py) - Simulates fluid closed loops using Darcy-Weisbach friction loss equations to quantify centripetal acceleration efficiency.
+*   [`fluid_vortex_systems/centripetal_implosion_core.py`](./fluid_vortex_systems/centripetal_implosion_core.py) - Implosive vector simulation for non-mechanical fluid compression.
+*   [`fluid_vortex_systems/low_friction_induction_pipeline`](./fluid_vortex_systems/low_friction_induction_pipeline) - 3D pipeline simulation for zero-drag linear fluid transport.
+
+### 3. 📁 Hardware Production & CAD Blueprints
+*   [`hardware_blueprints/universal_meta_tile.scad`](./hardware_blueprints/universal_meta_tile.scad) - OpenSCAD production-ready 3D open-hardware script. Procedurally maps active prime nodes and passive auxetic structures.
+
 4. SYSTEM REPOSITORY BLUEPRINTS
 This sandbox contains five interconnected execution and verification layers:
 
