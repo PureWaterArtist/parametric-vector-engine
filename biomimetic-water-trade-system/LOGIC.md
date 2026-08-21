@@ -1,4 +1,18 @@
-# 🔬 SymbioSys v6.0: Academic Discussion Notes & Theoretical Defense
+# 🛡️ Preemptive Axiom Matrix: First-Principles Verification
+
+Before evaluating the structural components of the SymbioSys framework, peer reviewers must recognize that this simulation does not operate on arbitrary human economic theories, political rules, or regulatory programming blocks. Instead, the architecture is grounded entirely in the unassailable laws of thermodynamics, biochemistry, and conservation of energy. 
+
+Any argument brought against this resource model is fundamentally an argument against the physical realities of the biosphere:
+
+| Anticipated Criticisms | The Underlying Ecosystem Reality | The Thermodynamic Truth |
+| :--- | :--- | :--- |
+| **"Market fiat pricing should override artificial energy premiums."** | Capital fiat currency cannot execute mechanical work. Moving liquid requires kinetic energy. | Tying transactions to **ATP hydrolysis** honors the **First Law of Thermodynamics**. Money cannot bypass physical work requirements. |
+| **"Instantaneous trade loops are superior to delayed sponge buffers."** | Earth systems possess deep, time-delayed geological absorption dampening zones. | Ignoring absorption lag causes severe numerical instability. The **Sponge Pipeline** prevents artificial data hyper-volatility. |
+| **"Metabolic firewalls are too aggressive and disrupt economic growth."** | Drying soil creates high capillary suction tension, increasing the work needed to draw water. | The lockout is a kinetic limitation, not a political ban. The route closes because the cell has **zero active ATP bonds** left to pump water. |
+
+---
+
+# 🔬 SymbioSys v7.0: Academic Discussion Notes & Theoretical Defense
 
 This document serves as the theoretical playbook for the SymbioSys alternative economic resource model. It bridges the implementation code (`app.js`) with established literature in ecological economics, thermodynamics, and multi-agent system theory to ground and defend the architecture against peer review.
 
@@ -13,7 +27,7 @@ Traditional microeconomics treats the natural environment as a sub-sector of the
 ### B. Non-Equilibrium Thermodynamics & Entropy
 The **Capillary Soil Tension Factor ($T_i$)** maps directly onto the laws of thermodynamics. As a resource pool approaches its boundary threshold, the energy required to extract the next unit of resource scales exponentially:
 $$T_i = \left( \frac{W_{\text{optimal}}}{W_{\text{current}} - W_{\text{floor}}} \right)^2$$
-*   **The Framework Realization:** In accordance with **Maximum Entropy Production principles**, resource scarcity is treated as an increase in local thermodynamic disorder. The system forces the network to spend exponentially more physical work ($kWh$ power grid drain) to maintain local organization (crop export production), embedding physical entropy directly into market friction.
+*   **The Framework Realization:** In accordance with **Maximum Entropy Production principles**, resource scarcity is treated as an increase in local thermodynamic disorder. The system forces the network to spend exponentially more physical work ($A_{\text{demand}}$ ATP molecular battery drain) to maintain local organization (crop export production), embedding physical entropy directly into market friction.
 
 ---
 
@@ -21,7 +35,7 @@ $$T_i = \left( \frac{W_{\text{optimal}}}{W_{\text{current}} - W_{\text{floor}}} 
 
 ### Q1: "An exponential price multiplier scaling to infinity will freeze trade routes, causing massive, unpredictable food price spikes. How is this market disruption acceptable?"
 *   **Defense Strategy:** The hyper-inflationary price spike is a protective, self-healing system feature, not an architectural error. In legacy systems, price signals are delayed, lagging until an aquifer is completely dry and a localized dust bowl occurs. 
-*   **The Mechanism:** In SymbioSys, the friction spikes *preemptively*. By driving up the transaction energy cost ($E_{\text{demand}}$) before the ecological floor is breached, the network generates immediate localized economic resistance. This forces rational importing nodes to automatically re-route their demand vectors to water-abundant nodes, optimizing global resource placement through decentralized avoidance rather than crisis response.
+*   **The Mechanism:** In SymbioSys, the friction spikes *preemptively*. By driving up the dynamic ATP metabolic demand ($A_{\text{demand}}$) before the ecological floor is breached, the network generates immediate localized economic resistance. This forces rational importing nodes to automatically re-route their demand vectors to water-abundant nodes, optimizing global resource placement through decentralized avoidance rather than crisis response.
 
 ### Q2: "Why model local soil infiltration as a multi-period sponge buffer delay rather than executing instantaneous resource availability updates?"
 *   **Defense Strategy:** Instantaneous updates cause severe numerical instability and algorithmic hyper-volatility (whipsawing data logs) common in standard multi-agent software models. 
@@ -46,4 +60,3 @@ For researchers, developers, and students looking to fork this GitHub repository
 *   **Empirical Data Ingestion Layer:** Replacing the stochastic `climateFactor` variable with a live web API connection that pulls historical or projected climate models (e.g., IPCC CMIP6 or NOAA real-time satellite groundwater data grids).
 *   **Dynamic Demographic Migration Triggers:** Upgrading the city sub-node logic so that if local municipal metabolic health stays low for multiple sequential epochs, population masses autonomously migrate across edge vectors toward high-health nodes, creating dynamic human-ecological feedback cycles.
 *   **Multi-Node Network Mesh Allocation:** Expanding the 2-node proof-of-concept into a 50-node geographic matrix running automated routing algorithms (like Dijkstra's or A* variants modified for lowest tension metrics) to observe macro resource distribution patterns on a global scale.
-*   
