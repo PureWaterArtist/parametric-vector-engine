@@ -113,16 +113,14 @@
                 Triggers a physics-based, self-regulating feedback iteration loop. Simulates time-delayed sub-surface infiltration buffers alongside dynamic capillary matrix tension scales.
             </p>
             <button class="btn" onclick="runSimulation()">Execute Capillary Loop</button>
-            
-            <h2 style="margin-top: 25px;">Core Paradigm Architecture</h2>
-            <table>
-                <thead>
-                    <tr><th>Attribute</th><th>Legacy Market</th><th>Biomimetic Grid</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Pricing Driver</td><td>Pure Fiat Supply</td><td>Dynamic Thermodynamic Tension</td></tr>
-                    <tr><td>Inflow Mechanics</td><td>Instantaneous Impact</td><td>Sponge Infiltration Pipelines</td></tr>
-                    <tr><td>Aquifer Protection</td><td>Depletion Until Dry</td><td>Natural Feedback Lockout</td></tr>
+<strong>Aquifer Sponge Yield (W<sub>current</sub><sup>t</sup>):</strong><br>
+W<sub>current</sub><sup>t-1</sup> + (&alpha;<sub>i</sub> * B<sub>i</sub><sup>t-1</sup>) - W<sub>extracted</sub><br><br>
+<strong>Capillary Soil Tension (T<sub>i</sub>):</strong><br>
+( W<sub>optimal</sub> / (W<sub>current</sub> - W<sub>floor</sub>) )<sup>2</sup><br><br>
+<strong>EWF Nexus Energy Demand (E<sub>demand</sub>):</strong><br>
+V<sub>b</sub> * Cost<sub>base</sub> * T<sub>i</sub><br><br>
+<strong>Generator Cooling Drain (W<sub>cooling</sub>):</strong><br>
+E<sub>demand</sub> * Factor<sub>cooling</sub>
                 </tbody>
             </table>
         </div>
