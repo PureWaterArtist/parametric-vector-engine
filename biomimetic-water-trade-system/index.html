@@ -53,7 +53,7 @@
             color: white;
             border: none;
             padding: 10px 20px;
-            font-size: 1fr;
+            font-size: 1rem;
             font-weight: 600;
             border-radius: 6px;
             cursor: pointer;
@@ -79,10 +79,11 @@
             padding: 15px;
             border-radius: 6px;
             border: 1px solid var(--border);
-            max-height: 400px;
+            max-height: 450px;
             overflow-y: auto;
             white-space: pre-wrap;
             font-size: 0.85rem;
+            color: #adbac7;
         }
         .badge {
             display: inline-block;
@@ -91,7 +92,7 @@
             font-weight: 600;
             border-radius: 20px;
         }
-        .badge-approved { background: rgba(63,185,80,0.15); color: var(--success); }
+        .badge-approved { background: rgba(210,153,34,0.15); color: var(--warning); }
         .badge-blocked { background: rgba(248,81,73,0.15); color: var(--danger); }
         .badge-subsidy { background: rgba(88,166,255,0.15); color: var(--primary); }
     </style>
@@ -101,7 +102,7 @@
 <div class="container">
     <header>
         <h1>Biomimetic Virtual Water Trade Engine</h1>
-        <p class="subtitle">Autonomous, Closed-Loop Resource Allocation Experiment Schema</p>
+        <p class="subtitle">Autonomous, Closed-Loop Resource Allocation Engine (v2.1 - Decoupled Script Module)</p>
     </header>
 
     <div class="grid">
@@ -109,9 +110,9 @@
         <div class="card">
             <h2>Simulation Controller</h2>
             <p style="font-size: 0.9rem; color: var(--text-muted);">
-                Triggers the 3-year lifecycle sequence demonstrating local metabolic firewall resistance, H2O-credit generation, and autonomous reverse infrastructure loops.
+                Triggers a 3-year extreme lifecycle event loop. Simulates a severe consecutive multi-year drought sequence followed by an unpredicted macro hydrological recharge deluge.
             </p>
-            <button class="btn" onclick="runSimulation()">Execute System Loop</button>
+            <button class="btn" onclick="runSimulation()">Execute Climate Stress Test</button>
             
             <h2 style="margin-top: 25px;">Core Paradigm Architecture</h2>
             <table>
@@ -146,7 +147,9 @@
                 <strong>Metabolic Health (H<sub>i</sub>):</strong><br>
                 ((W<sub>current</sub> - W<sub>floor</sub>) / W<sub>optimal</sub>) * (1 - Deficit<sub>nutrition</sub>)<br><br>
                 <strong>Autonomous Edge Friction (F<sub>ij</sub>):</strong><br>
-                e<sup>(H<sub>j</sub> - H<sub>i</sub>)</sup>
+                e<sup>(H<sub>j</sub> - H<sub>i</sub>)</sup><br><br>
+                <strong>Climate Impact Matrix Variables:</strong><br>
+                W<sub>current</sub><sup>t</sup> = W<sub>current</sub><sup>t-1</sup> + (Recharge<sub>base</sub> * &DoubleC;<sub>i</sub><sup>t</sup>)
             </div>
         </div>
     </div>
@@ -154,52 +157,12 @@
     <!-- Output Terminal -->
     <div class="card" style="margin-bottom: 30px;">
         <h2>Live Event Loop Terminal Output</h2>
-        <div id="terminal" class="log-container">System idle. Ready to initiate biomimetic resource cycle...</div>
+        <div id="terminal" class="log-container">System idle. Ready to initiate climate resilience verification sequence...</div>
     </div>
 </div>
 
-<script>
-    function runSimulation() {
-        const term = document.getElementById('terminal');
-        term.innerHTML = "=== INITIALIZING BIOMIMETIC DECENTRALIZED SYSTEM SIMULATION ===\n";
-        
-        // Node state track balances
-        let aridia = { name: "Aridia", blue: 2100, floor: 2000, optimal: 5000, h2oCredits: 0, health: 0.20 };
-        let pluvia = { name: "Pluvia", blue: 9000, floor: 3000, optimal: 10000, h2oCredits: 10, health: 0.90 };
-        
-        // Year 1 Transaction
-        term.innerHTML += "\n[YEAR 1] EVENT: Pluvia requests 2.0kg Cucumbers from Aridia.\n";
-        let frictionY1 = Math.exp(pluvia.health - aridia.health).toFixed(2);
-        term.innerHTML += ` -> Local Receptor Calculation: Friction Coefficient spikes to [${frictionY1}x]\n`;
-        term.innerHTML += ` -> Loop Closure Triggered: Pluvia forced to return 0.96L/kg physical mass equivalence.\n`;
-        
-        // Adjust values for Year 1
-        aridia.h2oCredits += 3.0;
-        aridia.health = 0.40; // Health climbs due to incoming technology offsets
-        term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-approved">APPROVED</span>\n`;
-        term.innerHTML += ` -> Node Ledger Balance Update: Aridia Health raised to [${aridia.health.toFixed(2)}], H2O-Credits: [${aridia.h2oCredits.toFixed(1)}]\n`;
-        
-        // Year 2 Transaction
-        term.innerHTML += "\n[YEAR 2] EVENT: Pluvia attempts high-volume demand shift (5.0kg Tomatoes from Aridia).\n";
-        let frictionY2 = Math.exp(pluvia.health - aridia.health).toFixed(2);
-        term.innerHTML += ` -> Local Receptor Calculation: Friction Coefficient registers at [${frictionY2}x]\n`;
-        term.innerHTML += ` -> Metabolic Safeguard Rule: Proposed transaction threatens local resource survival floor.\n`;
-        term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-blocked">BLOCKED VIA LOCAL METABOLIC FIREWALL</span>\n`;
-        term.innerHTML += ` -> System routing status: Demand package automatically re-routed away from stress center.\n`;
-        
-        // Year 3 Transaction
-        term.innerHTML += "\n[YEAR 3] EVENT: Adaptive Symbiosis Loop Pivot. Aridia imports 3.0kg Cucumbers from Pluvia.\n";
-        let frictionY3 = Math.exp(aridia.health - pluvia.health).toFixed(2);
-        term.innerHTML += ` -> Local Receptor Calculation: Friction Drops to [${frictionY3}x] (Automated Subsidized Exchange Path)\n`;
-        term.innerHTML += ` -> Settlement Process: Aridia successfully redeems the [3.0 H2O-Credits] earned in Year 1.\n`;
-        
-        aridia.health = 0.78; // Reaches strong metabolic health equilibrium
-        term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-subsidy">MUTUALISTIC OPTIMAL</span>\n`;
-        term.innerHTML += ` -> Node Ledger Balance Update: Aridia Metabolic Health reaches stable equilibrium at [${aridia.health.toFixed(2)}]\n`;
-        term.innerHTML += "\n=== SIMULATION CYCLE SUCCESSFUL: Global Ecological Equilibrium Maintained ===";
-    }
-</script>
-
+<!-- Load pure core processing script logic logic -->
+<script src="app.js"></script>
 </body>
-                                                                                                                       </html>
-                                                                                                                       
+                                                                                                                                          </html>
+                                                                                                                                          
