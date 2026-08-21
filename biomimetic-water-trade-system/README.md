@@ -50,6 +50,13 @@ $$T_i = \left( \frac{W_{\text{optimal}}}{W_{\text{current}} - W_{\text{floor}}} 
 The physical energy expenditure required to clear a virtual water export package across an edge pathway:
 $$E_{\text{total}} = V_b \cdot P_{\text{crop}} \cdot T_i$$
 
+#### 4. Energy-Water-Food (EWF) Nexus Interlock ($E_{\text{demand}}$)
+Calculates the total electrical power grid consumption ($kWh$) required to force water extraction out of high-tension aquifers for crop growth:
+$$E_{\text{demand}} = V_b \cdot C_{\text{base}} \cdot T_i$$
+
+*   **Closed-Loop Grid Cost:** For every energy unit consumed, a secondary cooling footprint drain ($W_{\text{cooling}}$) is extracted from the node's local water table to simulate power plant heat evaporation:
+$$W_{\text{cooling}} = E_{\text{demand}} \cdot F_{\text{cooling}}$$
+
 ---
 
 ### 📊 Baseline Commodity Profile Matrix
