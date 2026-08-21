@@ -92,7 +92,7 @@
             font-weight: 600;
             border-radius: 20px;
         }
-        .badge-approved { background: rgba(210,153,34,0.15); color: var(--warning); }
+        .badge-approved { background: rgba(63,185,80,0.15); color: var(--success); }
         .badge-blocked { background: rgba(248,81,73,0.15); color: var(--danger); }
         .badge-subsidy { background: rgba(88,166,255,0.15); color: var(--primary); }
     </style>
@@ -102,7 +102,7 @@
 <div class="container">
     <header>
         <h1>Biomimetic Virtual Water Trade Engine</h1>
-        <p class="subtitle">Autonomous, Closed-Loop Resource Allocation Engine (v2.1 - Decoupled Script Module)</p>
+        <p class="subtitle">Autonomous, Closed-Loop Resource Allocation Engine (v4.0 - Capillary Tension Loops)</p>
     </header>
 
     <div class="grid">
@@ -110,9 +110,9 @@
         <div class="card">
             <h2>Simulation Controller</h2>
             <p style="font-size: 0.9rem; color: var(--text-muted);">
-                Triggers a 3-year extreme lifecycle event loop. Simulates a severe consecutive multi-year drought sequence followed by an unpredicted macro hydrological recharge deluge.
+                Triggers a physics-based, self-regulating feedback iteration loop. Simulates urban water consumption drawdowns and dynamic soil pressure tension calculations.
             </p>
-            <button class="btn" onclick="runSimulation()">Execute Climate Stress Test</button>
+            <button class="btn" onclick="runSimulation()">Execute Capillary Loop</button>
             
             <h2 style="margin-top: 25px;">Core Paradigm Architecture</h2>
             <table>
@@ -120,9 +120,9 @@
                     <tr><th>Attribute</th><th>Legacy Market</th><th>Biomimetic Grid</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Pricing Driver</td><td>Pure Fiat Supply</td><td>Metabolic Health Score</td></tr>
+                    <tr><td>Pricing Driver</td><td>Pure Fiat Supply</td><td>Dynamic Thermodynamic Tension</td></tr>
                     <tr><td>Value Chains</td><td>Masked Blindspots</td><td>Transparent Traceability Array</td></tr>
-                    <tr><td>Aquifer Protection</td><td>Depletion Until Dry</td><td>Resiliency Floor Firewall</td></tr>
+                    <tr><td>Aquifer Protection</td><td>Depletion Until Dry</td><td>Natural Feedback Lockout</td></tr>
                 </tbody>
             </table>
         </div>
@@ -144,12 +144,12 @@
 
             <h2 style="margin-top: 20px;">Mathematical Framework</h2>
             <div style="font-size: 0.85rem; color: var(--text-muted); background: rgba(255,255,255,0.02); padding: 10px; border-radius: 4px; border: 1px solid var(--border);">
-                <strong>Metabolic Health (H<sub>i</sub>):</strong><br>
-                ((W<sub>current</sub> - W<sub>floor</sub>) / W<sub>optimal</sub>) * (1 - Deficit<sub>nutrition</sub>)<br><br>
-                <strong>Autonomous Edge Friction (F<sub>ij</sub>):</strong><br>
-                e<sup>(H<sub>j</sub> - H<sub>i</sub>)</sup><br><br>
-                <strong>Climate Impact Matrix Variables:</strong><br>
-                W<sub>current</sub><sup>t</sup> = W<sub>current</sub><sup>t-1</sup> + (Recharge<sub>base</sub> * &DoubleC;<sub>i</sub><sup>t</sup>)
+                <strong>Capillary Soil Tension (T<sub>i</sub>):</strong><br>
+                ( W<sub>optimal</sub> / (W<sub>current</sub> - W<sub>floor</sub>) )<sup>2</sup><br><br>
+                <strong>Total Extraction Friction (E<sub>total</sub>):</strong><br>
+                V<sub>b</sub> * P<sub>crop</sub> * T<sub>i</sub><br><br>
+                <strong>Decentralized Feedback Rule:</strong><br>
+                If T<sub>i</sub> &gt; 150.0 &rarr; Auto-freeze trade vector & trigger defensive crop portfolio mutation.
             </div>
         </div>
     </div>
@@ -157,12 +157,11 @@
     <!-- Output Terminal -->
     <div class="card" style="margin-bottom: 30px;">
         <h2>Live Event Loop Terminal Output</h2>
-        <div id="terminal" class="log-container">System idle. Ready to initiate climate resilience verification sequence...</div>
+        <div id="terminal" class="log-container">System idle. Ready to initiate physical tension simulation runtime...</div>
     </div>
 </div>
 
-<!-- Load pure core processing script logic logic -->
+<!-- Load decoupled core processing script logic -->
 <script src="app.js"></script>
 </body>
-                                                                                                                                          </html>
-                                                                                                                                          
+</html>
