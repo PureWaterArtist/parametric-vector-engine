@@ -1,26 +1,28 @@
 # 🌐 SymbioSys: Biomimetic Virtual Water Trade Engine
-> An Autonomous, Closed-Loop Resource Allocation Architecture and Decentralized Network Simulation.
+> An Autonomous, Closed-Loop Resource Allocation Architecture and Live Spatial GIS Network Simulation.
 
 ---
 
 ### 🎨 The Core Paradigm Shift: From Rules to Gradients
 Legacy international commodity markets rely on artificial trade rules and pricing models that decouple consumption from ecological reality. This results in predatory resource extraction, draining up to **11% of global groundwater tables** through blind trade.
 
-**SymbioSys v6.5** eliminates rigid, hardcoded programming constraints (like if/else code gates) and replaces them with **Negative Feedback Loops modeled on cellular bio-energetics**. By treating trade nodes like living biological cells, resource extraction naturally self-regulates via thermodynamic friction, time-delayed saturation dynamics, and molecular **ATP hydrolysis metabolic constraints**.
+**SymbioSys v7.0** eliminates rigid, hardcoded programming constraints (like if/else code gates) and replaces them with **Negative Feedback Loops modeled on cellular bio-energetics and dynamic spatial GIS vectors**. By mapping trade nodes onto real geographic coordinates and aquifers into living cellular bodies, resource extraction self-regulates via thermodynamic friction, time-delayed saturation dynamics, and molecular **ATP hydrolysis metabolic constraints**.
 
-[Legacy Free-Market Grid]        👉     [SymbioSys v6.5 Framework]
+```
+[Legacy Free-Market Grid]        👉     [SymbioSys v7.0 Framework]
 • Artificial Fiat Pricing                
 • Dynamic Metabolic Health Valuation
 • Masked Supply Chain Blindspots         
 • Pure Component Traceability Arrays
 • If/Else Regulatory Software Gates      
 • Natural Capillary Soil Tension
-• Generic Power Grid Accounting          
-• ATP ⇄ ADP Dephosphorylation Lifecycles
+• Abstract Text Sheet Accounting         
+• Live Interactive GIS Mapping Canvases
+```
 
 ---
 
-### 🏛️ System Core Physics & Biochemistry
+### 🏛️ System Core Physics, Biochemistry & Spatial Mapping
 
 #### 1. Capillary Soil Tension
 Instead of a central authority shutting down trade routes during a crisis, this engine replicates the **capillary tension** of drawing water from drying forest soil. When a node's local water reserves drop toward its ecological survival floor, the physical tension of the soil matrix climbs exponentially, requiring massive amounts of mechanical or technological energy to extract a single drop of liquid.
@@ -31,6 +33,9 @@ In real ecosystems, weather shocks or water extraction do not instantly update d
 #### 3. ATP ⇄ ADP Cellular Energy Metabolism
 Energy is no longer a generic, infinite cash reservoir. It is governed by a **Dephosphorylating Lifecycle Engine** modeled directly on Adenosine Triphosphate (**ATP**). Doing work (pumping water under high capillary tension) forces the enzyme matrix to split ATP into **ADP** (Adenosine Diphosphate) and loose inorganic phosphate, releasing a localized kinetic burst. Spent ADP components accumulate inside the node object and cannot be reused until secondary water resources are spent on cellular respiration to recharge the molecular battery.
 
+#### 4. Live Geographic GIS Corridor Vectoring
+The framework transitions abstract data loops into a visual spatial reality using an integrated open-source mapping engine layer. The layout tracks trans-continental resource trade using precise geographic markers: **Almería, Spain** (Source Node $V_{\text{export}}$) and **London, United Kingdom** (Sink Node $V_{\text{import}}$). Edge pathways are calculated as dynamic visual vectors that actively shift color in real time based on active capillary soil tension metrics, enabling immediate visual audits of global ecosystem safety thresholds.
+
 ---
 
 ### 🧮 Core System Equations
@@ -38,9 +43,6 @@ Energy is no longer a generic, infinite cash reservoir. It is governed by a **De
 #### 1. Sponge Buffer Aquifer Yield ($W_{\text{current}}^t$)
 Calculates the slow-moving filtration volume entering the core available groundwater table at time step $t$:
 $$W_{\text{current}}^{t} = W_{\text{current}}^{t-1} + \alpha_i \cdot \left( B_i^{t-1} \right) - W_{\text{extracted}}$$
-
-*   $B_i$: The current volume of moisture held inside Node $i$'s topsoil sponge buffer.
-*   $\alpha_i$: Local soil porosity factor (governs the fractional trickle speed from topsoil down to deep wells).
 
 #### 2. Capillary Soil Tension Factor ($T_i$)
 The automated thermodynamic friction encountered during water extraction at Node $i$:
@@ -50,12 +52,13 @@ $$T_i = \left( \frac{W_{\text{optimal}}}{W_{\text{current}} - W_{\text{floor}}} 
 The molecular battery units consumed to overcome local capillary soil matrix resistance during crop extraction:
 $$A_{\text{demand}} = V_b \cdot C_{\text{base}} \cdot T_i$$
 
-*   $V_b$: Total volumetric Blue Water requirement of the commodity weight.
-*   $C_{\text{base}}$: Node baseline ATP hydrolysis requirement per liter under optimal zero-tension conditions.
-
-#### 4. Respiration Recharge Cooling Cost ($W_{\text{recharge}}$)
-Accounts for secondary water consumption evaporated from the core water table to synthesize and compress ADP back into high-energy ATP bonds:
-$$W_{\text{recharge}} = A_{\text{demand}} \cdot F_{\text{recharge}}$$
+#### 4. Spatial Vector Edge State ($E_{\text{color}}$)
+Maps real-time thermodynamic tension onto visual spectrum values across the interactive GIS rendering canvas:
+$$E_{\text{color}} = \begin{cases} 
+\text{Green (\#3fb950)} & \text{if } T_i \le 1.5 \quad \text{(Homeostatic Equilibrium)} \\
+\text{Orange (\#d29922)} & \text{if } 1.5 < T_i \le 150.0 \quad \text{(Drought Premium Pressure)} \\
+\text{Red (\#f85149)} & \text{if } T_i > 150.0 \quad \text{(Metabolic Firewall Lockdown)} 
+\end{cases}$$
 
 ---
 
@@ -76,7 +79,7 @@ The simulation relies on clean, decoupled client-side code structures (`index.ht
 1. Download or clone this repository to your desktop machine.
 2. Ensure both files reside in the identical root folder directory.
 3. Open `index.html` directly in any updated modern desktop web browser.
-4. Click **Execute Capillary Loop** to evaluate the live homeostatic data feed.
+4. Click **Execute Climate Stress Test** to evaluate the live homeostatic map and data feed.
 
 ---
 
