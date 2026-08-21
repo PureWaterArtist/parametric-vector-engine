@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomimetic Virtual Water Trade Engine</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --success: #3fb950;
+            --warning: #d29922;
+            --danger: #f85149;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 { color: var(--primary); margin: 0 0 10px 0; font-size: 2rem; }
+        p.subtitle { color: var(--text-muted); margin: 0; font-size: 1.1rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+        }
+        h2 { color: #fff; font-size: 1.25rem; margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .btn {
+            background-color: var(--success);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1fr;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.2s;
+        }
+        .btn:hover { opacity: 0.9; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+        th { color: var(--text-muted); font-weight: 600; }
+        .log-container {
+            background-color: #040d21;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-size: 0.85rem;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+        }
+        .badge-approved { background: rgba(63,185,80,0.15); color: var(--success); }
+        .badge-blocked { background: rgba(248,81,73,0.15); color: var(--danger); }
+        .badge-subsidy { background: rgba(88,166,255,0.15); color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Biomimetic Virtual Water Trade Engine</h1>
+        <p class="subtitle">Autonomous, Closed-Loop Resource Allocation Experiment Schema</p>
+    </header>
+
+    <div class="grid">
+        <!-- System Control Panel -->
+        <div class="card">
+            <h2>Simulation Controller</h2>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+                Triggers the 3-year lifecycle sequence demonstrating local metabolic firewall resistance, H2O-credit generation, and autonomous reverse infrastructure loops.
+            </p>
+            <button class="btn" onclick="runSimulation()">Execute System Loop</button>
+            
+            <h2 style="margin-top: 25px;">Core Paradigm Architecture</h2>
+            <table>
+                <thead>
+                    <tr><th>Attribute</th><th>Legacy Market</th><th>Biomimetic Grid</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Pricing Driver</td><td>Pure Fiat Supply</td><td>Metabolic Health Score</td></tr>
+                    <tr><td>Value Chains</td><td>Masked Blindspots</td><td>Transparent Traceability Array</td></tr>
+                    <tr><td>Aquifer Protection</td><td>Depletion Until Dry</td><td>Resiliency Floor Firewall</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Matrix Definition -->
+        <div class="card">
+            <h2>Water Footprint Profile Matrix</h2>
+            <table>
+                <thead>
+                    <tr><th>Commodity</th><th>Total L/kg</th><th>🟢 Green</th><th>🔵 Blue</th><th>💧 Mass %</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Beef</td><td>15,400</td><td>94%</td><td>4%</td><td>-</td></tr>
+                    <tr><td>Wheat</td><td>1,800</td><td>70%</td><td>19%</td><td>-</td></tr>
+                    <tr><td>Tomatoes</td><td>214</td><td>40%</td><td>50%</td><td>94%</td></tr>
+                    <tr><td>Cucumbers</td><td>353</td><td>35%</td><td>55%</td><td>96%</td></tr>
+                </tbody>
+            </table>
+
+            <h2 style="margin-top: 20px;">Mathematical Framework</h2>
+            <div style="font-size: 0.85rem; color: var(--text-muted); background: rgba(255,255,255,0.02); padding: 10px; border-radius: 4px; border: 1px solid var(--border);">
+                <strong>Metabolic Health (H<sub>i</sub>):</strong><br>
+                ((W<sub>current</sub> - W<sub>floor</sub>) / W<sub>optimal</sub>) * (1 - Deficit<sub>nutrition</sub>)<br><br>
+                <strong>Autonomous Edge Friction (F<sub>ij</sub>):</strong><br>
+                e<sup>(H<sub>j</sub> - H<sub>i</sub>)</sup>
+            </div>
+        </div>
+    </div>
+
+    <!-- Output Terminal -->
+    <div class="card" style="margin-bottom: 30px;">
+        <h2>Live Event Loop Terminal Output</h2>
+        <div id="terminal" class="log-container">System idle. Ready to initiate biomimetic resource cycle...</div>
+    </div>
+</div>
+
+<script>
+    function runSimulation() {
+        const term = document.getElementById('terminal');
+        term.innerHTML = "=== INITIALIZING BIOMIMETIC DECENTRALIZED SYSTEM SIMULATION ===\n";
+        
+        // Node state track balances
+        let aridia = { name: "Aridia", blue: 2100, floor: 2000, optimal: 5000, h2oCredits: 0, health: 0.20 };
+        let pluvia = { name: "Pluvia", blue: 9000, floor: 3000, optimal: 10000, h2oCredits: 10, health: 0.90 };
+        
+        // Year 1 Transaction
+        term.innerHTML += "\n[YEAR 1] EVENT: Pluvia requests 2.0kg Cucumbers from Aridia.\n";
+        let frictionY1 = Math.exp(pluvia.health - aridia.health).toFixed(2);
+        term.innerHTML += ` -> Local Receptor Calculation: Friction Coefficient spikes to [${frictionY1}x]\n`;
+        term.innerHTML += ` -> Loop Closure Triggered: Pluvia forced to return 0.96L/kg physical mass equivalence.\n`;
+        
+        // Adjust values for Year 1
+        aridia.h2oCredits += 3.0;
+        aridia.health = 0.40; // Health climbs due to incoming technology offsets
+        term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-approved">APPROVED</span>\n`;
+        term.innerHTML += ` -> Node Ledger Balance Update: Aridia Health raised to [${aridia.health.toFixed(2)}], H2O-Credits: [${aridia.h2oCredits.toFixed(1)}]\n`;
+        
+        // Year 2 Transaction
+        term.innerHTML += "\n[YEAR 2] EVENT: Pluvia attempts high-volume demand shift (5.0kg Tomatoes from Aridia).\n";
+        let frictionY2 = Math.exp(pluvia.health - aridia.health).toFixed(2);
+        term.innerHTML += ` -> Local Receptor Calculation: Friction Coefficient registers at [${frictionY2}x]\n`;
+        term.innerHTML += ` -> Metabolic Safeguard Rule: Proposed transaction threatens local resource survival floor.\n`;
+        term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-blocked">BLOCKED VIA LOCAL METABOLIC FIREWALL</span>\n`;
+        term.innerHTML += ` -> System routing status: Demand package automatically re-routed away from stress center.\n`;
+        
+        // Year 3 Transaction
+        term.innerHTML += "\n[YEAR 3] EVENT: Adaptive Symbiosis Loop Pivot. Aridia imports 3.0kg Cucumbers from Pluvia.\n";
+        let frictionY3 = Math.exp(aridia.health - pluvia.health).toFixed(2);
+        term.innerHTML += ` -> Local Receptor Calculation: Friction Drops to [${frictionY3}x] (Automated Subsidized Exchange Path)\n`;
+        term.innerHTML += ` -> Settlement Process: Aridia successfully redeems the [3.0 H2O-Credits] earned in Year 1.\n`;
+        
+        aridia.health = 0.78; // Reaches strong metabolic health equilibrium
+        term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-subsidy">MUTUALISTIC OPTIMAL</span>\n`;
+        term.innerHTML += ` -> Node Ledger Balance Update: Aridia Metabolic Health reaches stable equilibrium at [${aridia.health.toFixed(2)}]\n`;
+        term.innerHTML += "\n=== SIMULATION CYCLE SUCCESSFUL: Global Ecological Equilibrium Maintained ===";
+    }
+</script>
+
+</body>
+                                                                                                                       </html>
+                                                                                                                       
