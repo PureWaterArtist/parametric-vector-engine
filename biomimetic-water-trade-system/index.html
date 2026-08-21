@@ -102,7 +102,7 @@
 <div class="container">
     <header>
         <h1>Biomimetic Virtual Water Trade Engine</h1>
-        <p class="subtitle">Autonomous, Closed-Loop Resource Allocation Engine (v4.0 - Capillary Tension Loops)</p>
+        <p class="subtitle">Autonomous, Closed-Loop Resource Allocation Engine (v5.0 - Sponge Infiltration & Tension Loops)</p>
     </header>
 
     <div class="grid">
@@ -110,7 +110,7 @@
         <div class="card">
             <h2>Simulation Controller</h2>
             <p style="font-size: 0.9rem; color: var(--text-muted);">
-                Triggers a physics-based, self-regulating feedback iteration loop. Simulates urban water consumption drawdowns and dynamic soil pressure tension calculations.
+                Triggers a physics-based, self-regulating feedback iteration loop. Simulates time-delayed sub-surface infiltration buffers alongside dynamic capillary matrix tension scales.
             </p>
             <button class="btn" onclick="runSimulation()">Execute Capillary Loop</button>
             
@@ -121,7 +121,7 @@
                 </thead>
                 <tbody>
                     <tr><td>Pricing Driver</td><td>Pure Fiat Supply</td><td>Dynamic Thermodynamic Tension</td></tr>
-                    <tr><td>Value Chains</td><td>Masked Blindspots</td><td>Transparent Traceability Array</td></tr>
+                    <tr><td>Inflow Mechanics</td><td>Instantaneous Impact</td><td>Sponge Infiltration Pipelines</td></tr>
                     <tr><td>Aquifer Protection</td><td>Depletion Until Dry</td><td>Natural Feedback Lockout</td></tr>
                 </tbody>
             </table>
@@ -144,12 +144,12 @@
 
             <h2 style="margin-top: 20px;">Mathematical Framework</h2>
             <div style="font-size: 0.85rem; color: var(--text-muted); background: rgba(255,255,255,0.02); padding: 10px; border-radius: 4px; border: 1px solid var(--border);">
+                <strong>Aquifer Sponge Yield (W<sub>current</sub><sup>t</sup>):</strong><br>
+                W<sub>current</sub><sup>t-1</sup> + (&alpha;<sub>i</sub> * B<sub>i</sub><sup>t-1</sup>) - W<sub>extracted</sub><br><br>
                 <strong>Capillary Soil Tension (T<sub>i</sub>):</strong><br>
                 ( W<sub>optimal</sub> / (W<sub>current</sub> - W<sub>floor</sub>) )<sup>2</sup><br><br>
                 <strong>Total Extraction Friction (E<sub>total</sub>):</strong><br>
-                V<sub>b</sub> * P<sub>crop</sub> * T<sub>i</sub><br><br>
-                <strong>Decentralized Feedback Rule:</strong><br>
-                If T<sub>i</sub> &gt; 150.0 &rarr; Auto-freeze trade vector & trigger defensive crop portfolio mutation.
+                V<sub>b</sub> * P<sub>crop</sub> * T<sub>i</sub>
             </div>
         </div>
     </div>
