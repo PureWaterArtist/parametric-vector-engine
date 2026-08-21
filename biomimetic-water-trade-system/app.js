@@ -1,11 +1,4 @@
-/**
- * SymbioSys v6.0 - Pure Biomimetic Self-Regulating Network
- * Features: Capillary Tension + Sponge Pipelines + Energy-Water-Food (EWF) Nexus
- */
-
-let simulationEpoch = 1;
-
-// Natural State Profiles with EWF Nexus Infrastructure Added
+// Upgraded Node State Structure using the ATP Molecular Battery Metaphor
 let aridia = {
     name: "Aridia",
     waterCurrent: 2200,      
@@ -16,10 +9,11 @@ let aridia = {
     infiltrationBuffer: 800,  
     soilPorosityAlpha: 0.25,
     
-    // NEXUS POOLS: Energy Grid Integration
-    energyPoolUnits: 500,     // Total electricity reserves available (e.g., MWh)
-    energyBaseCostPerLiter: 1.5, // Base kWh needed per liter under zero tension
-    waterCostPerEnergyUnit: 0.8  // Liters evaporated to generate 1 Energy Unit
+    // BIOMIMETIC ATP POOLS
+    atpUnits: 500,            // Active charged batteries (Triphosphate)
+    adpUnits: 0,              // Spent discharged batteries (Diphosphate)
+    baseAtpCostPerLiter: 1.5, // Base ATP hydrolysis cost per liter
+    waterCostPerRecharge: 0.8 // Water needed to recharge 1 ADP back to ATP
 };
 
 let pluvia = {
@@ -32,81 +26,33 @@ let pluvia = {
     infiltrationBuffer: 2500,
     soilPorosityAlpha: 0.40,
     
-    // NEXUS POOLS: Flushed with energy infrastructure
-    energyPoolUnits: 5000,    
-    energyBaseCostPerLiter: 1.0, 
-    waterCostPerEnergyUnit: 0.5  
+    atpUnits: 5000,    
+    adpUnits: 0,
+    baseAtpCostPerLiter: 1.0, 
+    waterCostPerRecharge: 0.5  
 };
 
-function runSimulation() {
-    const term = document.getElementById('terminal');
-    term.innerHTML = `=== INITIALIZING SYMBIOSYS HOMEOSTATIC CORE (VERSION 6.0) ===\n`;
-    term.innerHTML += ">>> NEXUS INTERLOCK: Energy-Water-Food (EWF) Metabolic Gradients [ONLINE].\n\n";
+// Inside your main simulation loop function:
+// Replace the old energy check with this Hydrolysis Block:
 
-    let climateFactor = 0.20; // Continued dry period
-    term.innerHTML += `[ENV EVENT] Dry Cycle Active. Incoming regional precipitation at [${(climateFactor*100)}%].\n`;
+// 1. CALCULATE HYDROLYSIS ENERGY DEMAND
+let requiredAtpUnits = waterFootprintRequired * node.baseAtpCostPerLiter * capillaryTension;
+term.innerHTML += ` -> Biochemical Check: Hydrolyzing [${requiredAtpUnits.toFixed(1)} ATP → ADP] to overcome soil capillary matrix resistance.\n`;
 
-    aridia.infiltrationBuffer += (300 * climateFactor);
-    pluvia.infiltrationBuffer += (1000 * climateFactor);
+if (node.atpUnits < requiredAtpUnits) {
+    term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-blocked">METABOLIC EXHAUSTION</span>\n`;
+    term.innerHTML += ` -> Feedback: Insufficient active ATP bonds to fuel cellular work. Export dropped.\n`;
+} else {
+    // Execute Hydrolysis (Dephosphorylation)
+    node.atpUnits -= requiredAtpUnits;
+    node.adpUnits += requiredAtpUnits; // Spent batteries accumulate
 
-    [aridia, pluvia].forEach(node => {
-        term.innerHTML += `\n--- Processing Nexus Node: ${node.name} ---\n`;
+    // 2. THE RECHARGE PENALTY (Cellular Respiration)
+    // To turn that ADP back into ATP later, power plants consume cooling water
+    let metabolicCoolingLoss = requiredAtpUnits * node.waterCostPerRecharge;
+    node.waterCurrent -= (waterFootprintRequired + metabolicCoolingLoss);
 
-        // 1. WATER SPONGE INFILTRATION TRICKLE
-        let slowInfiltrationYield = node.infiltrationBuffer * node.soilPorosityAlpha;
-        node.infiltrationBuffer -= slowInfiltrationYield;
-        node.waterCurrent += slowInfiltrationYield;
-
-        // 2. URBAN CONSUMPTION METABOLISM DRAW
-        let municipalDrain = (node.populationMillions * 100 * 365) / 1000000; 
-        node.waterCurrent -= municipalDrain;
-        term.innerHTML += ` -> Municipal Drawdown: -${municipalDrain.toFixed(1)}L extracted for urban consumption.\n`;
-
-        // 3. CAPILLARY SOIL TENSION CALCULATION
-        let fluidDeficit = node.waterCurrent - node.waterFloor;
-        if (fluidDeficit <= 0) {
-            term.innerHTML += ` -> <span class="badge badge-blocked">METABOLIC COLLAPSE</span>: Core hydration reserves entirely depleted.\n`;
-            node.waterCurrent = node.waterFloor; 
-            return;
-        }
-        let capillaryTension = Math.pow((node.waterOptimal / fluidDeficit), 2);
-        term.innerHTML += ` -> Capillary Soil Tension: [${capillaryTension.toFixed(2)}x Dynamic Friction]\n`;
-
-        // 4. FOOD FOOTPRINT CALCULATION
-        let baseExportOrder = 2.0; 
-        let waterFootprintRequired = baseExportOrder * 353 * node.portfolioProduceShare;
-        
-        // 5. THE ENERGY INTERLOCK (The Nexus Core)
-        // Electricity required scales directly with the physical tension of the drying soil
-        let requiredEnergyUnits = waterFootprintRequired * node.energyBaseCostPerLiter * capillaryTension;
-        term.innerHTML += ` -> EWF Nexus Estimate: Requiring [${requiredEnergyUnits.toFixed(1)} Energy Units] to extract ${waterFootprintRequired.toFixed(1)}L for agricultural growth.\n`;
-
-        // Check Energy Availability Before Processing Water Trade
-        if (node.energyPoolUnits < requiredEnergyUnits) {
-            term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-blocked">ENERGY GRID BLOCK</span>\n`;
-            term.innerHTML += ` -> Feedback Loop: Insufficient electricity reserves to override soil tension. Export vector dropped.\n`;
-            term.innerHTML += ` -> [Genetic Adapt]: Modifying crop portfolio away from water-intensive systems to preserve grid stability.\n`;
-            node.portfolioProduceShare = Math.max(0.10, node.portfolioProduceShare - 0.20);
-        } else if (capillaryTension > 150.0) {
-            term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-blocked">TENSION REJECTION</span>\n`;
-            term.innerHTML += ` -> Feedback Loop: Capillary strain breaches safety threshold. Route closed.\n`;
-            node.portfolioProduceShare = Math.max(0.10, node.portfolioProduceShare - 0.20);
-        } else {
-            // Deduct Water and Energy simultaneously (Closing the nexus loop)
-            node.waterCurrent -= waterFootprintRequired;
-            node.energyPoolUnits -= requiredEnergyUnits;
-
-            // Energy plants consume water for cooling during generation replacement
-            let coolingWaterLost = requiredEnergyUnits * node.waterCostPerEnergyUnit;
-            node.waterCurrent -= coolingWaterLost;
-
-            term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-approved">NEXUS COMPLIANT</span>\n`;
-            term.innerHTML += ` -> Energy Used: -${requiredEnergyUnits.toFixed(1)} Units. Remaining Grid Pool: [${node.energyPoolUnits.toFixed(1)} Units]\n`;
-            term.innerHTML += ` -> Generator Cooling Loss: -${coolingWaterLost.toFixed(1)}L evaporated from core table.\n`;
-            term.innerHTML += ` -> Current Aquifer Reserve: [${node.waterCurrent.toFixed(1)}L]\n`;
-        }
-    });
-
-    simulationEpoch++;
-    term.innerHTML += `\n=== SIMULATION CYCLE ${simulationEpoch} REGISTERED VIA NEXUS CORE ===`;
+    term.innerHTML += ` -> TRANSACTION STATUS: <span class="badge badge-approved">METABOLICALLY COMPLETE</span>\n`;
+    term.innerHTML += ` -> Molecular Action: Spent [${requiredAtpUnits.toFixed(1)}] ATP. Current Cell Pool: [${node.atpUnits.toFixed(1)} ATP Active / ${node.adpUnits.toFixed(1)} ADP Discharged]\n`;
+    term.innerHTML += ` -> Cellular Respiration Water Cost: -${metabolicCoolingLoss.toFixed(1)}L lost to heat/evaporation.\n`;
 }
