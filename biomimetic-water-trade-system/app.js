@@ -1,3 +1,32 @@
+// RECEPTOR LISTENER: Monitors the open financial network mesh to alter water trading parameters
+window.addEventListener("message", (event) => {
+    // 1. LISTEN TO THE NETWORK
+    if (event.data && event.data.type === "MYCO_FINANCE_BROADCAST") {
+        let externalFinanceHealth = event.data.health_score;
+        
+        // If the finance script reports systemic asset starvation, water transport corridors drop
+        if (externalFinanceHealth < 0.20) {
+            document.getElementById('terminal').innerHTML += `\n⚠️ [Mesh Alert]: Vascular asset pool crashed. Restricting trans-continental water corridors.\n`;
+            // Capital starvation forces the node to hoard water, prematurely spiking local soil tension
+            aridia.waterCurrent = Math.max(aridia.waterFloor, aridia.waterCurrent - 150);
+        }
+        
+        // 2. BROADCAST WATER ENGINE RESILIENCE METRICS OUTWARD
+        broadcastHydrologicalState();
+    }
+});
+
+function broadcastHydrologicalState() {
+    let fluidDeficit = aridia.waterCurrent - aridia.waterFloor;
+    let currentCapillaryTension = Math.pow((aridia.waterOptimal / Math.max(1, fluidDeficit)), 2);
+    
+    // Broadcast live capillary tension data back out to the open web network
+    window.postMessage({ 
+        type: "SYMBIOSYS_WATER_BROADCAST", 
+        capillary_tension: currentCapillaryTension,
+        water_current_liters: aridia.waterCurrent
+    }, "*");
+}
 /**
  * SymbioSys v7.0 - Pure Biomimetic Self-Regulating Network
  * Features: Capillary Tension + Sponge Pipelines + ATP Hydrolysis Engine + Live GIS Layer Triggers
