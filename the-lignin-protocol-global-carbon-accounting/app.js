@@ -1,3 +1,20 @@
+// RECEPTOR LISTENER: Tracks open hydrological state metrics to calculate cooling friction
+window.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "SYMBIOSYS_WATER_BROADCAST") {
+        let externalWaterCurrentLiters = event.data.water_current_liters;
+        
+        // Critical System Interlock: If the water table drops below standard cooling minimums,
+        // carbon compressors overheat, stalling operations and piling raw emission mass on the column
+        if (externalWaterCurrentLiters < 2100) {
+            let waterDeficitOverheatPenalty = 25; // Tons of unmitigated gas accumulated due to line stalling
+            
+            industrialNode.activeEmissionsTons += waterDeficitOverheatPenalty;
+            
+            document.getElementById('terminal').innerHTML += `\n🔥 [Mesh Nexus Trigger]: Aquifer cooling pool critically low (${externalWaterCurrentLiters.toFixed(0)}L). Carbon compressor line overheating; +${waterDeficitOverheatPenalty} Tons of raw emissions dumped onto structural columns.\n`;
+        }
+    }
+});
+
 // RECEPTOR LISTENER: Pulls live energy data from the open web network
 window.addEventListener("message", (event) => {
     if (event.data && event.data.type === "APIARY_GRID_BROADCAST") {
