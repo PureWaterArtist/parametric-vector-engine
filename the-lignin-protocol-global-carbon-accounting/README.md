@@ -15,8 +15,8 @@ Legacy carbon markets treat greenhouse gas accounting as an abstract financial d
 • Instant Mechanical Compression Throttling
 • Manual Third-Party Paper Audits       
 • Thermodynamic Stress-Gauge Verification
-• Weightless "Pay-to-Pollute" Loops      
-• Structural Failure Operational Lockouts
+• Weightless "Pay-to-Pollute" Loops    
+•Structural Failure Operational Lockouts
 
 ---
 
