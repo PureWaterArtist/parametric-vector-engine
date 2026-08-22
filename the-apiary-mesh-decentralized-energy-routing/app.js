@@ -65,3 +65,20 @@ function executeApiaryLoop() {
         }, 4000);
     }, 4000);
 }
+// BROADCAST FUNCTION: Exposes energy surplus variables to the network mesh
+function broadcastGridState() {
+    const gridStatePayload = {
+        node_id: "grid_cell_alpha",
+        available_surplus_mwh: (nodeProducer.energyCurrent - nodeProducer.energyOptimal),
+        waggle_frequency_hz: Math.pow(((nodeConsumer.energyOptimal - nodeConsumer.energyCurrent) / nodeConsumer.energyOptimal), 2) * 120
+    };
+    
+    // In a full production server, this payload is written to a public endpoint ('/status.json')
+    // For local cross-origin development/testing, we broadcast it across the window session mesh
+    window.postMessage({ type: "APIARY_GRID_BROADCAST", data: gridStatePayload }, "*");
+    
+    console.log(">>> [Apiary Mesh]: Dynamic energy state data broadcasted to open web mesh.");
+}
+
+// Hook this broadcast action right into the end of your existing runSimulation() loop
+// usage inside loop: broadcastGridState();
