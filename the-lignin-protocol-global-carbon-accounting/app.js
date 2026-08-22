@@ -24,7 +24,6 @@ function broadcastStructuralStrain() {
     
     window.postMessage({ type: "LIGNIN_STRAIN_BROADCAST", strain_factor: currentStrain }, "*");
 }
-
 /**
  * The Lignin Protocol v1.0 - Core Computational Logic Module
  * Structural Mechanical Strain Carbon Accounting Model
