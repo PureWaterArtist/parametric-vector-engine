@@ -1,3 +1,19 @@
+// RECEPTOR LISTENER: Monitors the open virtual water trade engine mesh
+window.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "SYMBIOSYS_WATER_BROADCAST") {
+        let externalWaterTension = event.data.capillary_tension;
+        
+        // Critical System Interlock: If capillary soil tension spikes past threshold limits,
+        // it triggers an immediate emergency power draw from the active energy pool
+        if (externalWaterTension > 50.0) {
+            let emergencyPumpDraw = externalWaterTension * 1.8; // Electrical energy needed to fight tension
+            
+            nodeProducer.energyCurrent = Math.max(0, nodeProducer.energyCurrent - emergencyPumpDraw);
+            
+            document.getElementById('terminal').innerHTML += `\n⚡ [Mesh Nexus Trigger]: High soil tension detected (${externalWaterTension.toFixed(1)}x). Swarm diverting -${emergencyPumpDraw.toFixed(1)} MWh to emergency water extraction lines.\n`;
+        }
+    }
+});
 /**
  * The Apiary Mesh v1.0 - Core Computational Logic Module
  * Decentralized Autonomous Waggle Frequency Gradient Energy Engine [1]
