@@ -13,7 +13,6 @@ window.addEventListener("message", (event) => {
         }
     }
 });
-
 /**
  * Mycorrhizal DeFi v1.0 - Core Computational Logic Module
  * Ecosystem Canopy Health Symbiosis Asset Allocation Engine
