@@ -78,3 +78,18 @@ function executeMycoLoop() {
         }, 4000);
     }, 4000);
 }
+// RECEPTOR LISTENER: Monitors physical structural integrity of the surrounding ecosystem
+window.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "LIGNIN_STRAIN_BROADCAST") {
+        let physicalStrainFactor = event.data.strain_factor;
+        
+        // The Interlock: Physical strain automatically degrades local metabolic health scores
+        if (physicalStrainFactor > 1.0) {
+            document.getElementById('terminal').innerHTML += `\n🚫 [Mesh Alert]: Severe physical foundation column cracking detected (${physicalStrainFactor.toFixed(2)}x strain).\n`;
+            
+            // Force an automated emergency liquidity lockdown
+            saplingNode.liquidity = Math.max(10, saplingNode.liquidity - 200); 
+            document.getElementById('terminal').innerHTML += ` -> Symbiosis Index Rule: Capital exit routes sealed to anchor resources inside the local soil.\n`;
+        }
+    }
+});
