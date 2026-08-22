@@ -1,3 +1,30 @@
+// RECEPTOR LISTENER: Pulls live energy data from the open web network
+window.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "APIARY_GRID_BROADCAST") {
+        let externalEnergyData = event.data.data;
+        
+        // If the energy grid reports a deficit or a storm blackout, carbon compressors stall
+        if (externalEnergyData.available_surplus_mwh <= 0) {
+            document.getElementById('terminal').innerHTML += `\n⚠️ [Mesh Alert]: Inflowing network power dropped. Carbon compressor lines stalled.\n`;
+            // Untreated emissions begin to pile up automatically because the extraction line slowed down
+            industrialNode.activeEmissionsTons += 15; 
+        } else {
+            // High inflowing energy acts as a physical crane lifting carbon weight
+            industrialNode.ligninOffsetMass += (externalEnergyData.available_surplus_mwh * 2);
+        }
+        
+        // Broadcast the updated structural column strain outward to the finance network
+        broadcastStructuralStrain();
+    }
+});
+
+function broadcastStructuralStrain() {
+    let totalMass = industrialNode.massBaseline + (industrialNode.activeEmissionsTons * industrialNode.carbonToWeightRatio) - industrialNode.ligninOffsetMass;
+    let currentStrain = Math.pow((totalMass / industrialNode.massCriticalLimit), 2);
+    
+    window.postMessage({ type: "LIGNIN_STRAIN_BROADCAST", strain_factor: currentStrain }, "*");
+}
+
 /**
  * The Lignin Protocol v1.0 - Core Computational Logic Module
  * Structural Mechanical Strain Carbon Accounting Model
@@ -87,30 +114,4 @@ function executeLigninLoop() {
             simulationCycle++;
         }, 4000);
     }, 4000);
-}
-// RECEPTOR LISTENER: Pulls live energy data from the open web network
-window.addEventListener("message", (event) => {
-    if (event.data && event.data.type === "APIARY_GRID_BROADCAST") {
-        let externalEnergyData = event.data.data;
-        
-        // If the energy grid reports a deficit or a storm blackout, carbon compressors stall
-        if (externalEnergyData.available_surplus_mwh <= 0) {
-            document.getElementById('terminal').innerHTML += `\n⚠️ [Mesh Alert]: Inflowing network power dropped. Carbon compressor lines stalled.\n`;
-            // Untreated emissions begin to pile up automatically because the extraction line slowed down
-            industrialNode.activeEmissionsTons += 15; 
-        } else {
-            // High inflowing energy acts as a physical crane lifting carbon weight
-            industrialNode.ligninOffsetMass += (externalEnergyData.available_surplus_mwh * 2);
-        }
-        
-        // Broadcast the updated structural column strain outward to the finance network
-        broadcastStructuralStrain();
-    }
-});
-
-function broadcastStructuralStrain() {
-    let totalMass = industrialNode.massBaseline + (industrialNode.activeEmissionsTons * industrialNode.carbonToWeightRatio) - industrialNode.ligninOffsetMass;
-    let currentStrain = Math.pow((totalMass / industrialNode.massCriticalLimit), 2);
-    
-    window.postMessage({ type: "LIGNIN_STRAIN_BROADCAST", strain_factor: currentStrain }, "*");
 }
